@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+      <div class="nav">
+        <h2>– {{ country.name }} –</h2>
+        <table class="content-nav"></table>
+      </div>
+      <div class="content" style="margin-top: 170px ;">
+        <div class="clubs">
+          {% for club in clubs %}
+            <div class="club">
+            <a href="/clubs/{{ club.id/">
+              <img src="{{ club.image.url}}" alt="" />
+              {{ club.name}}
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+{% endblock %}
